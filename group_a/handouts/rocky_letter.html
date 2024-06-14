@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/css/letter.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div id="parchment"></div>
+        <div id="contain">
+            <p id="labarum"><img src="../../assets/img/strahd-crest.webp"></p>
+            <p>
+                Zeer Geachte Rocky, ik hoop dat deze brief u in goede gezondheid bereikt. 
+                Uw reputatie als beschermer van de natuur is mij ter ore gekomen, en ik vrees dat uw vaardigheden hier in Barovia dringend nodig zijn.
+            </p>
+            <p>
+                De natuurlijke orde in deze streek is ernstig verstoord. 
+                Duistere wezens doorkruisen onze bossen, en de balans tussen leven en dood is uit evenwicht. 
+                Beesten van onnatuurlijke kracht en verderf zwerven door de valleien en bergen, hun aanwezigheid vervult de lucht met een kwaadaardig aura.
+                De flora verkommert, en de fauna wordt gejaagd door schimmen van een ver verleden.
+            </p>
+            <p>
+                Barovia schreeuwt om hulp. Alleen iemand met uw talenten kan de natuur herstellen en de balans terugbrengen in 
+                dit door ellende geteisterde land. Ik smeek u, kom en gebruik uw krachten om onze wildernis te genezen. 
+                Uw toewijding aan de natuur zal niet onopgemerkt blijven. Uw moed en wijsheid zijn onze laatste hoop.
+            </p>
+            
+            <!-- This is a red wine cachet ... but shh ! -->
+            <p class="cachet"><img src="../../assets/img/strahd-seal.webp"></p>
+            <div id="signature">Heerser van Barovia<br />Graaf Strahd von Zarovich</div>
+        </div>
+      </main>
+      
+      <svg>
+        <filter id="wavy2">
+          <feTurbulence x="0" y="0" baseFrequency="0.02" numOctaves="5" seed="1" />
+          <feDisplacementMap in="SourceGraphic" scale="20" />
+        </filter>
+      </svg>
+</body>
+<script>
+    // First call to define "parchment" height
+    document.onload = scrollHeight();
+
+    // Redraw when viewport is modified
+    window.addEventListener('resize', function(event){
+        scrollHeight();
+    });
+
+
+    function scrollHeight() {
+    var content = document.querySelector('#parchment');
+    var container = document.querySelector('#contain');
+
+    // SVG feTurbulence can modify all others elements, for this reason "parchment" is in another <div> and in absolute position.
+    // so for a better effect, absolute height is defined by his content.
+    content.style.height = (container.offsetHeight - 80) + 'px';
+    }
+    </script>
+</html>
