@@ -8,13 +8,13 @@
   }
 
 :root {
-  --fontSize: calc((1vw + 1vh) * .75);
+    --fontSize: calc((1vw + 1vh) * .75);
 }
 
 *, *:before, *:after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html, body {
@@ -24,15 +24,15 @@ html, body {
 }
 
 body {
-  font: var(--fontSize)/200% 'F1805 Austerlitz Script W01 Lt';
-  background-image: url(https://images.unsplash.com/photo-1546484396-fb3fc6f95f98);
-  background-size: cover;
+    font: var(--fontSize)/200% 'F1805 Austerlitz Script W01 Lt';
+    background-image: url(https://images.unsplash.com/photo-1546484396-fb3fc6f95f98);
+    background-size: cover;
 }
 
 main {
-  position: relative;
-  width: 100%;
-  height: auto;
+    position: relative;
+    width: 100%;
+    height: auto;
 }
 
 /* WARNING ! This solution seems to not work on all navigators.
@@ -61,64 +61,64 @@ August 2021 : ok on Chrome v92+, Firefox v90+, Edge v92+
 /* v2.3 : folds added , remove this part if you don't want them
    I'll try to make it look like crumpled paper if I have time. */
 #parchment:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: conic-gradient(#fff3, #fff0 2% 24%, #fff2 25%, #4321 0, #0000 27% 48%, #9632 50%, #fff2 0, #fff0 52% 73%, #9632 75%, #fff3 0, #fff0 78% 97%, #9632);
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: conic-gradient(#fff3, #fff0 2% 24%, #fff2 25%, #4321 0, #0000 27% 48%, #9632 50%, #fff2 0, #fff0 52% 73%, #9632 75%, #fff3 0, #fff0 78% 97%, #9632);
 }
 
 main p {
-  font-size: 2.25em;
-  margin-top: .75em;
-  text-align: justify;
+    font-size: 2.25em;
+    margin-top: .75em;
+    text-align: justify;
 }
 
 div p:not(:first-child)::first-letter {
-  float: left;
-  font: 1.7em/1em Austerlitz;
-  /* a little relief for the first letter*/
-  text-shadow: 1px 1px 1px black;
-  margin: 0 .5rem;
+    float: left;
+    font: 1.7em/1em Austerlitz;
+    /* a little relief for the first letter*/
+    text-shadow: 1px 1px 1px black;
+    margin: 0 .5rem;
 }
 
 #contain {
-  position: relative;
- 	display: flex;
-  flex-direction: column;
+    position: relative;
+    display: flex;
+    flex-direction: column;
 	width: 75%;
-  height: auto;
-  margin: 0 auto;
+    height: auto;
+    margin: 0 auto;
 	padding: 4em;
 }
 
 #labarum {
-  width: 20%;
-  margin-left: calc((100% - 20%) / 2);
-  height: auto;
+    width: 20%;
+    margin-left: calc((100% - 20%) / 2);
+    height: auto;
 }
 
 .cachet {
-  /* image width = 210px and height = 250px */
-  /*  5 is one common denominator 210 = 5 * 42 */
-  width: calc((100vw * 5) / 42);
-  height: auto; /* Height is auto ajusted */
-  margin-top: 4rem;
-  margin-left: auto;
+    /* image width = 210px and height = 250px */
+    /*  5 is one common denominator 210 = 5 * 42 */
+    width: calc((100vw * 5) / 42);
+    height: auto; /* Height is auto ajusted */
+    margin-top: 4rem;
+    margin-left: auto;
 }
 .cachet img{
     filter: brightness(65%);
 }
 
 #labarum img, .cachet img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 
 #signature {
-  text-align: right;
-  font-size: 250%;
+    text-align: right;
+    font-size: 250%;
 }
