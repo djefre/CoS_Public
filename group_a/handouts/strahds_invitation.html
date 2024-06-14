@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/css/strahd_letter.css">
+    <title>Strahd's uitnodiging</title>
+</head>
+<body>
+    <main>
+        <div id="parchment"></div>
+        <div id="contain">
+            <p id="labarum"><img src="../../assets/img/strahd-crest.webp"></p>
+            <p>
+                Mijn vrienden, weet dat ik het ben die je naar dit land, mijn thuis, heb gebracht en weet dat alleen ik je ervan kan bevrijden. 
+                Ik verzoek je te komen dineren in mijn kasteel, zodat we elkaar in een beschaafde omgeving kunnen ontmoeten. 
+            </p>
+            <p>
+                Je doorgang hierheen zal veilig zijn. Ik wacht op je komst.
+            </p>
+            <p class="cachet"><img src="../../assets/img/strahd-seal.webp"></p>
+            <div id="signature">Uw gastheer<br/>Graaf Strahd von Zarovich</div>
+        </div>
+      </main>
+      
+      <svg>
+        <filter id="wavy2">
+          <feTurbulence x="0" y="0" baseFrequency="0.02" numOctaves="5" seed="1" />
+          <feDisplacementMap in="SourceGraphic" scale="20" />
+        </filter>
+      </svg>
+</body>
+<script defer src="../../assets/scripts/letter.js"></script>
+</html>
